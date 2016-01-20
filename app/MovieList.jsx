@@ -3,12 +3,6 @@ var Movie = require('./Movie.jsx');
 var MovieAPI = require('./api/MovieAPI');
 
 var MovieList = React.createClass({
-  getInitialState: function () {
-    return {
-      movies: [],
-      loading: false
-    }
-  },
 
   componentWillMount: function () {
     this.setState({

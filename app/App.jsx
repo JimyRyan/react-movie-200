@@ -5,11 +5,23 @@ var MovieList = require('./MovieList.jsx');
 var SearchBar = require('./SearchBar.jsx');
 
 var App = React.createClass({
+
+    getInitialState: function () {
+        return {
+            movies: [],
+            loading: false
+        }
+    },
+
+    onSearchBar: function(keyWords) {
+        console.log(keyWords);
+    },
+
   render: function () {
     return (
       <div>
         <Header />
-        <SearchBar />
+        <SearchBar onSearchBar={this.onSearchBar}/>
         <MovieList />
       </div>
     );
