@@ -7,6 +7,7 @@ var MOVIES = [
 		title : "Avatar",
 		category : 'sciencesfiction',
 		releaseYear : "2010",
+	  	poster : "img/avatar.jpg",
 		directors : "James Cameron",
 		actors : "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang, Michelle Rodriguez",
 		synopsis : "Sur la lointaine planète de Pandora, Jake Sully, un héros malgré lui, " +
@@ -30,16 +31,40 @@ var MOVIES = [
 		rate : 5,
 		lastViewDate : new Date(2012, 5, 13, 9, 30, 45),
 		price : 34.76
+	},
+	{
+		id: 3,
+		title : "REC",
+		category : 'sciencesfiction',
+		releaseYear : "2001",
+		poster : "img/rec.jpg",
+		directors : "Peter Jackson",
+		actors : "Elijah Wood, Sean Astin, Ian McKellen, Sala Baker, Viggo Mortensen",
+		synopsis : "Frodon le Hobbit hérite de l'Anneau Unique, un instrument de pouvoir absolu" +
+		"qui permettrait à Sauron, le Seigneur des ténèbres, de régner sur la Terre du Milieu." +
+		" Commence alors un vaste périple visant à la destruction de l'objet.",
+		rate : 5,
+		lastViewDate : new Date(2012, 5, 13, 9, 30, 45),
+		price : 34.76
 	}
 ];
 
 var MovieList = React.createClass({
   render: function () {
+
+	  var movies = MOVIES.map(function (movie) {
+		  return (
+			  <Movie data={movie}></Movie>
+		  );
+	  });
+
     return (
-      <ul className="thumbnails list-unstyled">
-          <Movie data={MOVIES[0]}></Movie>
-          <Movie data={MOVIES[1]}></Movie>
-      </ul>
+		<div>
+			<span>{movies.length} Movie(s)</span>
+		  <ul className="thumbnails list-unstyled">
+			  {movies}
+		  </ul>
+		</div>
     );
   }
 });
