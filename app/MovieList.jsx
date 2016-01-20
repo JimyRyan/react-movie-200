@@ -1,4 +1,5 @@
 var React = require('react');
+var Movie = require('./Movie.jsx');
 
 var MOVIES = [
   {
@@ -6,7 +7,6 @@ var MOVIES = [
 		title : "Avatar",
 		category : 'sciencesfiction',
 		releaseYear : "2010",
-		poster : "img/avatar.jpg",
 		directors : "James Cameron",
 		actors : "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang, Michelle Rodriguez",
 		synopsis : "Sur la lointaine planète de Pandora, Jake Sully, un héros malgré lui, " +
@@ -37,23 +37,8 @@ var MovieList = React.createClass({
   render: function () {
     return (
       <ul className="thumbnails list-unstyled">
-          <li className="col-md-12 row">
-              <img src="img/avatar.jpg" className="col-md-2" />
-              <div className="caption">
-                  <h3>AVATAR</h3>
-                  <p><b>Acteurs : </b>Bruce Willis, Bruce Willis & Bruce Willis</p>
-                  <p><b>Synopsis : </b>Il se passe des trucs dans ce film</p>
-              </div>
-          </li>
-
-          <li className="col-md-12 row">
-              <img src="img/rec.jpg" className="col-md-2" />
-              <div className="caption">
-                  <h3>REC</h3>
-                  <p><b>Acteurs : </b>Des gens, et d'autres gens.</p>
-                  <p><b>Synopsis : </b>Il se passe aussi des trucs dans ce film</p>
-              </div>
-          </li>
+          <Movie data={MOVIES[0]}></Movie>
+          <Movie data={MOVIES[1]}></Movie>
       </ul>
     );
   }
