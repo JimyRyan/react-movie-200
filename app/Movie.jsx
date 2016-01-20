@@ -17,7 +17,7 @@ var Movie = React.createClass({
           <p><b>Prix : </b>{film.price} €</p>
         </div>
         <div className="pull-right">
-          <button className="btn btn-danger"><i className="glyphicon glyphicon-trash"></i></button>
+          <button className="btn btn-danger" onClick={this.props.onClose}><i className="glyphicon glyphicon-trash"></i></button>
         </div>
       </li>
     );

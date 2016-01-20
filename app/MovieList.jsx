@@ -3,7 +3,14 @@ var Movie = require('./Movie.jsx');
 var MovieAPI = require('./api/MovieAPI');
 
 var MovieList = React.createClass({
-  getInitialState: function () {
+
+
+    onMovieDeletion: function(id) {
+        return MovieAPI.deleteMovie(id);
+    },
+
+
+    getInitialState: function () {
     return {
       movies: [],
       loading: false
@@ -26,8 +33,8 @@ var MovieList = React.createClass({
   render: function () {
     var movies = this.state.movies;
     var moviesTag = movies.map(function (movie) {
-      return <Movie film={movie} />
-    });
+      return <Movie film={movie} onMovieDeletion={this.props.onDeleteDeletion.bind(null, movie.id)}/>
+    }.bind(this));
     var content;
 
     if (this.state.loading) {
