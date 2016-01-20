@@ -18,6 +18,7 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7" />
   <component name="PhpServers">
     <servers />
   </component>
