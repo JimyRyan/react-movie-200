@@ -1,18 +1,21 @@
 var React = require('react');
 
+var Link = require('react-router').Link;
+
 var Header = React.createClass({
   render: function () {
     return (
       <header className="navbar navbar-default">
           <section className="container-fluid">
-            <a className="navbar-brand">ReactMovie</a>
+            <Link to={'/'} className="navbar-brand" activeClassName="active">ReactMovie</Link>
             <ul className="nav navbar-nav">
-              <li><a>Mes films</a></li>
+              <li><Link to={'/movies'} activeClassName="active">Mes films</Link></li>
             </ul>
           </section>
       </header>
     );
   }
 });
+
 
 module.exports = Header;

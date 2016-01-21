@@ -1,6 +1,8 @@
 var React = require('react');
 var Movie = require('./Movie.jsx');
 
+var Link = require('react-router').Link;
+
 var MovieList = React.createClass({
   shouldComponentUpdate: function (nextProps) {
     return this.props.searchKey !== nextProps.searchKey || this.props.movies !== nextProps.movies;
@@ -15,30 +17,24 @@ var MovieList = React.createClass({
                         return movie.title.toLowerCase().match(searchKey.toLowerCase());
                       })
                       .map(function (movie) {
-                        return <li className="list-group-item" key={movie.id}><a>{movie.title}</a></li>;
+                        return <li className="list-group-item" key={movie.id}><Link to={'/movie/' + movie.id}>{movie.title}</Link></li>;
                       });
     var content;
-    var firstMovie;
 
     if (this.props.loadingMovies) {
       content = <li>Chargement de la liste des films en cours</li>
-      firstMovie = false;
     } else {
       content = moviesTag;
-      firstMovie = <Movie film={movies[0]} />;
     }
 
     return (
       <div>
         <header className="page-header">
-          <h1>Ma vidéothèque <small>{movies.length} films</small> <a className="btn btn-success" to="/movies/new">Ajouter</a></h1>
+          <h1>Ma vidéothèque <small>{movies.length} films</small> <Link className="btn btn-success" to="/movies/movie/new">Ajouter</Link></h1>
         </header>
         <ul className="col-md-4 list-group">
           {content}
         </ul>
-        <div className="col-md-8">
-          {firstMovie}
-        </div>
       </div>
     );
   }
