@@ -7,10 +7,10 @@ var MovieList = React.createClass({
     shouldComponentUpdate: function (nextProps, nextState) {
 
         var oldSearchKey = this.props.searchKey;
-        var newSearchKey = nextState.searchKey;
+        var newSearchKey = nextProps.searchKey;
 
         // Changement du mot clef ou actualisation des films
-        if (oldSearchKey !== newSearchKey || this.props.movies !== nextState.movies) {
+        if (oldSearchKey !== newSearchKey || this.props.movies !== nextProps.movies) {
             return true;
         } else {
             return false;
