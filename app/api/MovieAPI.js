@@ -5,12 +5,11 @@ function getMovieList (cb) {
             .then(function (response) { return response.data; });
 }
 
-function deleteMovie (id) {
-    return axios.delete('/server/api/movies/' + id)
-        .then(function (response) { return response; });
+function removeMovie (id) {
+    return axios.delete('/server/api/movies/' + id);
 }
 
 module.exports = {
   getMovieList: getMovieList,
-    deleteMovie: deleteMovie
+    removeMovie: removeMovie
 };
