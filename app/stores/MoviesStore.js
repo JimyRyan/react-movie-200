@@ -100,7 +100,25 @@ dispatcher.register(function (action) {
             break;
 
         case actionTypes.ADD_MOVIE:
-            MovieAPI.addMovie(action.data);
+            MovieAPI.addMovie(action.data)
+                .then(function(response) {
+
+                    // Rajout du film...
+                    var newMovies = state.movies.concat([response]);
+
+                    state.movies = newMovies;
+
+                    var newState = _.merge(state, {movies: newMovies, displayedMovies: newMovies});
+
+                    // rafraichissement de l'UI
+                    MoviesStore.emitChange(newState);
+
+                }.bind(this))
+                .catch(function (response) {
+                    // AJAX KO
+                    // Affiche l'erreur dans la console
+                    console.log(response);
+                });
             break;
 
         case actionTypes.UPDATE_MOVIE:

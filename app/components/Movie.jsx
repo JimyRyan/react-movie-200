@@ -74,7 +74,8 @@ var Movie = React.createClass({
     onMovieModification: function (newData) {
         var updatedMovie = _.merge(this.state.movie, newData);
 
-        this.props.onMovieModification(updatedMovie);
+        // Update the movie
+        MoviesActionCreator.updateMovie(updatedMovie);
 
         this.closeEditionForm();
     },
@@ -108,7 +109,15 @@ var Movie = React.createClass({
             );
         }
 
-        // Movie chargé
+        // Movie (normalement) chargé
+        // A gérer proprement, le cas ou l'ID n'existe pas : prévoir un alertBox
+        // ici, si this.state.movie est vide => affichage que le film n'existe pas
+        if (!this.state.movie.id) {
+            return (
+                <div>Le film est introuvé ;(</div>
+            );
+        }
+
 
         var movie               = this.state.movie,
             afficheUrl          = movie.poster || 'img/no-poster.jpg',

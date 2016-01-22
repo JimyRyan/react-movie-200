@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6f909155-5045-4e9d-83a7-2a59ac778795" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/actions/MoviesActionCreator.js" afterPath="$PROJECT_DIR$/app/actions/MoviesActionCreator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/actions/actionTypes.js" afterPath="$PROJECT_DIR$/app/actions/actionTypes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/Movie.jsx" afterPath="$PROJECT_DIR$/app/components/Movie.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/MovieForm.jsx" afterPath="$PROJECT_DIR$/app/components/MovieForm.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/MovieList.jsx" afterPath="$PROJECT_DIR$/app/components/MovieList.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/ReactMovie.jsx" afterPath="$PROJECT_DIR$/app/components/ReactMovie.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/SearchBar.jsx" afterPath="$PROJECT_DIR$/app/components/SearchBar.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/stores/MoviesStore.js" afterPath="$PROJECT_DIR$/app/stores/MoviesStore.js" />
     </list>
     <ignored path="react-movie-200.iws" />
@@ -47,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/app/actions/MoviesActionCreator.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+              <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -67,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/app/stores/MoviesStore.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="74" column="66" selection-start-line="74" selection-start-column="66" selection-end-line="74" selection-end-column="66" />
+              <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -93,21 +87,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovieForm.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MovieForm.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/components/MovieForm.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46875">
-              <caret line="23" column="33" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="33" />
+            <state vertical-scroll-proportion="-30.555555">
+              <caret line="59" column="69" selection-start-line="59" selection-start-column="61" selection-end-line="59" selection-end-column="69" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Movie.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Movie.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/components/Movie.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="33" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.8411458">
+              <caret line="76" column="27" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -152,10 +146,10 @@
         <option value="$PROJECT_DIR$/app/actions/actionTypes.js" />
         <option value="$PROJECT_DIR$/app/components/SearchBar.jsx" />
         <option value="$PROJECT_DIR$/app/api/MovieAPI.js" />
-        <option value="$PROJECT_DIR$/app/components/Movie.jsx" />
-        <option value="$PROJECT_DIR$/app/stores/MoviesStore.js" />
         <option value="$PROJECT_DIR$/app/components/MovieList.jsx" />
         <option value="$PROJECT_DIR$/app/components/MovieForm.jsx" />
+        <option value="$PROJECT_DIR$/app/stores/MoviesStore.js" />
+        <option value="$PROJECT_DIR$/app/components/Movie.jsx" />
       </list>
     </option>
   </component>
@@ -731,12 +725,12 @@
       <option name="number" value="Default" />
       <updated>1453402521177</updated>
       <workItem from="1453402522561" duration="4645000" />
-      <workItem from="1453408256969" duration="11167000" />
+      <workItem from="1453408256969" duration="13140000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15812000" />
+    <option name="totallyTimeSpent" value="17785000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="711" extended-state="6" />
@@ -913,14 +907,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/actions/MoviesActionCreator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/Home.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -933,22 +919,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="51" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/stores/MoviesStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="74" column="66" selection-start-line="74" selection-start-column="66" selection-end-line="74" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/Movie.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="33" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -969,10 +939,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/actions/MoviesActionCreator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/stores/MoviesStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/MovieForm.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46875">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="33" />
+        <state vertical-scroll-proportion="-30.555555">
+          <caret line="59" column="69" selection-start-line="59" selection-start-column="61" selection-end-line="59" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/Movie.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8411458">
+          <caret line="76" column="27" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="27" />
           <folding />
         </state>
       </provider>
