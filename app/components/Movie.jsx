@@ -25,13 +25,26 @@ var Movie = React.createClass({
     },
 
     componentDidMount: function () {
+        this.fetchMovie();
+    },
+
+    componentDidUpdate: function (prevProps) {
+        let oldId = prevProps.params.id;
+        let newId = this.props.params.id;
+
+        if (newId && oldId !== newId) {
+            this.fetchMovie();
+        }
+    },
+
+    fetchMovie: function() {
         this.setState({
             dataLoaded : false,
             dataLoading: true
         });
 
         // Envoie de l'event qui demande la récupération des data du movi passé en param
-        MoviesActionCreator.getMovie(this.state.id);
+        MoviesActionCreator.getMovie(this.props.params.id);
     },
 
     // Le handler appeler lors des modifications du store
@@ -80,19 +93,6 @@ var Movie = React.createClass({
         this.closeEditionForm();
     },
 
-    //componentDidMount: function () {
-       // this.fetchMovie();
-    //},
-/*
-    componentDidUpdate: function (prevProps) {
-        let oldId = prevProps.params.id;
-        let newId = this.props.params.id;
-
-        if (newId && oldId !== newId) {
-            this.fetchMovie();
-        }
-    },
-*/
     render: function () {
 
         // Movie en chargée
