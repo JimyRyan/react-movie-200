@@ -9,16 +9,25 @@ var MovieList = React.createClass({
 //    },
 
 
-    // Init the data
+    // Initialisation des données
     getInitialState: function () {
-        return {movies: []};
+        return {
+            movies: [],
+            keywords: "",
+            loadingMovies: false
+        };
     },
 
-    // Listener pour le chargement des data async
     // Ajout le listner lorsque le composant est ajouté du DOM
     componentWillMount: function () {
 
+        // Listener pour le chargement des données async
         MoviesStore.addChangeListener(this.onShowMovies);
+
+        // Loading...
+        this.setState({
+            loadingMovies: true
+        });
 
         // Envoie de l'event qui demande la récupération des data depuis l'API (async)
         MoviesActionCreator.fetchMovies();
@@ -28,33 +37,54 @@ var MovieList = React.createClass({
     componentWillUnmount: function () {
 
         MoviesStore.removeChangeListener(this.onShowMovies);
-
-        // Envoie de l'event qui demande la récupération des data depuis l'API (async)
-        //MoviesActionCreator.fetchMovies();
     },
 
-    onShowMovies: function () {
+    // Affichage des movies lorsque les données sont chargées
+    onShowMovies: function (event) {
         this.setState({
-            movies       : MoviesStore.getState().movies,
-            loadingMovies: false
+            movies       : event.state.displayedMovies,
+            keywords     : event.state.keywords,
+            loadingMovies: event.state.loadingMovies
         })
     },
 
+    onSearch: function (searchKey) {
+        this.setState({
+            searchKey: searchKey
+        });
+    },
+
+    addMovie: function (movie) {
+        var newMovie = {
+            title   : movie.title,
+            actors  : movie.actors,
+            synopsis: movie.synopsis
+        };
+
+        MovieAPI.addMovie(newMovie).then(function (movie) {
+            var newMovieList = this.state.movies.concat([movie]);
+
+            this.setState({
+                movies: newMovieList
+            });
+        }.bind(this));
+    },
+
     render: function () {
-        var movies = this.props.movies;
-        var onMovieDeletion = this.props.onMovieDeletion;
-        var onMovieModification = this.props.onMovieModification;
-        var searchKey = this.props.searchKey;
+        var movies = this.state.movies;
+        var keywords = this.state.keywords;
+
+        //var searchKey = this.props.searchKey;
         var moviesTag = movies.filter(function (movie) {
-                return movie.title.toLowerCase().match(searchKey.toLowerCase());
+                return movie.title.toLowerCase().match(keywords.toLowerCase());
             })
             .map(function (movie) {
                 return <li className="list-group-item" key={movie.id}><Link
                     to={'/movie/' + movie.id}>{movie.title}</Link></li>;
-            });
+            }.bind(this));
         var content;
 
-        if (this.props.loadingMovies) {
+        if (this.state.loadingMovies) {
             content = <li>Chargement de la liste des films en cours</li>
         } else {
             content = moviesTag;
@@ -70,7 +100,9 @@ var MovieList = React.createClass({
                 <ul className="col-md-4 list-group">
                     {content}
                 </ul>
+
                 <div className="col-md-8">
+                    {/* Fiche d'1 movie OU Fiche d'ajout (cf. /App.jsx) */}
                     {this.props.children}
                 </div>
             </div>

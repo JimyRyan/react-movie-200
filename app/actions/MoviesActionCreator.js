@@ -20,6 +20,15 @@ module.exports = {
 
     },
 
+    searchMovie: function(keywords) {
+
+        dispatcher.dispatch({
+            actionType: actionTypes.SEARCH_MOVIE,
+            keywords: keywords
+        })
+    },
+
+
     addMovie : function(data) {
 
         dispatcher.dispatch({

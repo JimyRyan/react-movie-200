@@ -1,19 +1,18 @@
-ReactMovie
+Step 10
 ============
 
-Librairie de films développé avec ReactJS.
+Pour l’instant, toutes manipulations de données sont faites grâce à un système de callbacks passés en props ce qui est lourd.
 
-Cette application sert de support pour la formation ReactJS au SfeirSchool
+Utiliser Flux pour implémenter les fonctionnalités suivantes :
+Affichage de la liste des films
+Affichage du détail d’un film
+Filtrage de la liste des films suite à une recherche
+Ajout d’un nouveau film
+Suppression d’un film
+Modification d’un film
 
-## Pré-requis
-* Installer NodeJS
-* Install webpack et webpack-dev-server : `npm install -g webpack webpack-dev-server`
+Remarque : pour vous faire gagner du temps vous avez à disposition les fichiers suivants :
+actionTypes : dans lequel vous définirez les types d’actions possibles
+MoviesActionCreator : dans lequel vous définirez les différentes actions
+MoviesStore : Store relatif aux films
 
-## Installation
-* Récupérer les sources : `git clone git@github.com:Sfeir/react-movie-200.git`
-* Dans un terminal, à la racine du projet, lancer la commande : `npm install`
-
-## Démarrage de l'application
-* Lancer la commande `node server.js` (démarre le serveur fournissant les données)
-* Lancer la commande `npm start` (démarre le serveur webpack de livereload)
-* Accéder à l'application via l'adresse [http://localhost:8080/](http://localhost:8080/)

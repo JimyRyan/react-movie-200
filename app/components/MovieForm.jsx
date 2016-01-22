@@ -44,13 +44,13 @@ var MovieForm = React.createClass({
 					<div className="form-group">
 						<label className="col-sm-4 control-label">Titre :</label>
 						<div className="col-sm-7">
-							<input type="text" ref="titleInput" className="form-control" required/>
+							<input type="text" ref="movieTitle" className="form-control" required/>
 						</div>
 					</div>
 					<div className="form-group">
 						<label className="col-sm-4 control-label">Année de sortie :</label>
 						<div className="col-sm-7">
-							<input type="text" className="form-control"/>
+							<input type="text" ref=className="form-control"/>
 						</div>
 					</div>
 					<div className="form-group">
@@ -79,7 +79,7 @@ var MovieForm = React.createClass({
 					</div>
           <div className="form-group">
             <div className="col-sm-offset-2 col-sm-10">
-              {saveButton}
+              {saveButton}{cancelBtn}
             </div>
           </div>
 			</form>

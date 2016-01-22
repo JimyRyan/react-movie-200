@@ -1,7 +1,8 @@
 module.exports = {
-    FETCH_MOVIES: "fetch_movies",
-    GET_MOVIE: "get_movie",
-    ADD_MOVIE: "add_movie",
-    UPDATE_MOVIE: "update_movie",
-    DELETE_MOVIE: "delete_movie"
+    FETCH_MOVIES: "FETCH_MOVIES",
+    GET_MOVIE: "GET_MOVIE",
+    SEARCH_MOVIE: "SEARCH_MOVIE",
+    ADD_MOVIE: "ADD_MOVIE",
+    UPDATE_MOVIE: "UPDATE_MOVIE",
+    DELETE_MOVIE: "DELETE_MOVIE"
 };
